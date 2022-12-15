@@ -10,7 +10,7 @@ jobs:
       # Run the custom container action
       - name: 'Run Container Action'
         id: example
-        uses: ./action.yaml
+        uses: ./
         with:
           greeting: 'Lester'
 
