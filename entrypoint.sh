@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Example input variable
-echo "Hello $INPUT_MYINPUT"
+echo "Hello $INPUT_GREETING"
 
 # Example output variable
 MEMORY=$(cat /proc/meminfo)
