@@ -1,0 +1,20 @@
+name: 'Example Container Action'
+description: 'An example custom GitHub Action that executes inside a container on a runner'
+author: 'Lester March'
+
+# Define the "greeting" input variable
+inputs:
+  greeting:
+    description: 'Greeting'
+    required: true
+    default: 'Friend'
+
+# Define the "memory" output variable
+outputs:
+  memory:
+    description: 'Meminfo'
+
+# Specify the action type as container
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
