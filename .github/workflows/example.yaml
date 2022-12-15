@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repo
+      - uses: actions/checkout@v2
+
+      # Run the custom container action
+      - name: 'Run Container Action'
+        id: example
+        uses: ./action.yaml
+        with:
+          greeting: 'Lester'
+
+      # Echo the output from the custom container action
+      - name: 'Echo Output'
+        run: |
+          echo "Meminfo: "
+          echo ${{ steps.example.outputs.memory }}
